@@ -20,5 +20,7 @@ export class AppComponent {
   // 231. Making a Reusable Input
   // 232. Adding Message Cases
   // 233. Changing Styling on Validation Errors
+  // 234. Adding Additional Inputs
+  //
 
 }

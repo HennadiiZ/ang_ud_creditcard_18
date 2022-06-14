@@ -13,7 +13,22 @@ export class CardFormComponent implements OnInit {
      Validators.required,
      Validators.minLength(3),
     //  Validators.pattern(/\s/)
-    ])
+    ]),
+    cardNumber: new FormControl('', [
+      Validators.required,
+      Validators.minLength(3),
+     //  Validators.pattern(/\s/)
+     ]),
+     expiration: new FormControl('', [
+      Validators.required,
+      Validators.minLength(3),
+     //  Validators.pattern(/\s/)
+     ]),
+     securityCode: new FormControl('', [
+      Validators.required,
+      Validators.minLength(3),
+     //  Validators.pattern(/\s/)
+     ])
   });
 
   constructor() {
