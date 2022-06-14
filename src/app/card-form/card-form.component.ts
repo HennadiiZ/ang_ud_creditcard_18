@@ -12,7 +12,7 @@ export class CardFormComponent implements OnInit {
    name: new FormControl('', [
      Validators.required,
      Validators.minLength(3),
-     Validators.pattern(/\s/)
+    //  Validators.pattern(/\s/)
     ])
   });
 

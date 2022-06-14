@@ -19,4 +19,6 @@ export class AppComponent {
   // 230. Showing and Hiding Validation Messages
   // 231. Making a Reusable Input
   // 232. Adding Message Cases
+  // 233. Changing Styling on Validation Errors
+
 }

@@ -9,10 +9,14 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class InputComponent implements OnInit {
 
   @Input() control!: FormControl;
+  @Input() label!: string;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  // showErrors(){
+  //   return this.control!.dirty && this.control!.touched && this.control!.errors
+  // }
 }

@@ -1,21 +1,40 @@
-<input type="text" [formControl]="control" placeholder="Name">
-<ng-container
-  *ngIf="
-    control!.touched &&
-    control!.errors &&
-    control!.dirty
-  ">
-  <small *ngIf="control.errors!['required']">
-    Value is required.
-  </small>
-  <small *ngIf="control.errors!['minlength']">
-    Min length is
-    {{ control.errors!['minlength'].requiredLength }}
-    characters.
-    You entered {{ control.errors!['minlength'].actualLength }}
-    characters.
-  </small>
-  <small *ngIf="control.errors!['pattern']">
-   Invalid format
-  </small>
-</ng-container>
+<div class="field">
+
+  <label  for="input-field" class="label">{{ label }}</label>
+
+  <div class="control">
+    <input
+      class="input"
+      id="input-field"
+      [formControl]="control"
+      placeholder="Name"
+      [ngClass]="{ 'is-danger':
+        control!.dirty &&
+        control!.touched &&
+        control!.errors
+      }"
+    >
+  </div>
+
+  <ng-container
+    *ngIf="
+      control!.touched &&
+      control!.errors &&
+      control!.dirty
+    ">
+    <small class="help is-danger" *ngIf="control.errors!['required']">
+      Value is required.
+    </small>
+    <small class="help is-danger" *ngIf="control.errors!['minlength']">
+      Min length is
+      {{ control.errors!['minlength'].requiredLength }}
+      characters.
+      You entered {{ control.errors!['minlength'].actualLength }}
+      characters.
+    </small>
+    <small class="help is-danger" *ngIf="control.errors!['pattern']">
+     Invalid format
+    </small>
+  </ng-container>
+
+</div>
