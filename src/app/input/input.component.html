@@ -9,18 +9,14 @@
       [formControl]="control"
       placeholder="Name"
       [ngClass]="{ 'is-danger':
-        control!.dirty &&
-        control!.touched &&
-        control!.errors
+        showErrorsHalper()
       }"
     >
   </div>
 
   <ng-container
     *ngIf="
-      control!.touched &&
-      control!.errors &&
-      control!.dirty
+      showErrorsHalper()
     ">
     <small class="help is-danger" *ngIf="control.errors!['required']">
       Value is required.
