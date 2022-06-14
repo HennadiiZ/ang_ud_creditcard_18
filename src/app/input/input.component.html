@@ -15,4 +15,7 @@
     You entered {{ control.errors!['minlength'].actualLength }}
     characters.
   </small>
+  <small *ngIf="control.errors!['pattern']">
+   Invalid format
+  </small>
 </ng-container>
