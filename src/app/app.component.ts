@@ -22,6 +22,6 @@ export class AppComponent {
   // 233. Changing Styling on Validation Errors
   // 234. Adding Additional Inputs
   // 235. Handling Form Submission
-  // 
+  // 236. Additional Validations
 
 }

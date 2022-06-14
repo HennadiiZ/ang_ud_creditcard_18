@@ -9,26 +9,26 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class CardFormComponent implements OnInit {
 
   cardForm = new FormGroup({
-   name: new FormControl('', [
-     Validators.required,
-     Validators.minLength(3),
-    //  Validators.pattern(/\s/)
+    name: new FormControl('', [
+      Validators.required,
+      Validators.minLength(3),
+      // Validators.pattern(/\s/)
     ]),
     cardNumber: new FormControl('', [
       Validators.required,
       Validators.minLength(3),
-     //  Validators.pattern(/\s/)
-     ]),
-     expiration: new FormControl('', [
+      // Validators.pattern(/\s/)
+    ]),
+    expiration: new FormControl('', [
       Validators.required,
       Validators.minLength(3),
-     //  Validators.pattern(/\s/)
-     ]),
-     securityCode: new FormControl('', [
+      Validators.pattern(/^(0[1-9]|1[0-2])\/\d{2}$/)
+    ]),
+    securityCode: new FormControl('', [
       Validators.required,
       Validators.minLength(3),
-     //  Validators.pattern(/\s/)
-     ])
+      // Validators.pattern(/\s/)
+    ])
   });
 
   constructor() {
