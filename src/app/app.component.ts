@@ -13,4 +13,8 @@ export class AppComponent {
   // 224. Reactive Forms vs Template Forms
   // 225. Creating a Form Instance (CardFormComponent)
   // 226. Binding a FormGroup to a Form
+  // 227. Validating Fields
+  // 228. Finding Validation Errors
+  // 229. Nasty Error Handling
+  // 
 }

@@ -9,8 +9,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class CardFormComponent implements OnInit {
 
   cardForm = new FormGroup({
-    name: new FormControl('', Validators.required),
-    surname: new FormControl(null, Validators.required),
+    name: new FormControl('', [Validators.required, Validators.minLength(3)]),
+    surname: new FormControl(null, [Validators.required, Validators.minLength(3)]),
   });
 
   constructor() { }
@@ -19,7 +19,7 @@ export class CardFormComponent implements OnInit {
   }
 
   submit(){
-    
+
   }
 
 }
