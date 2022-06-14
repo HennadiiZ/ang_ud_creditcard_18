@@ -16,5 +16,6 @@ export class AppComponent {
   // 227. Validating Fields
   // 228. Finding Validation Errors
   // 229. Nasty Error Handling
+  // 230. Showing and Hiding Validation Messages
   // 
 }

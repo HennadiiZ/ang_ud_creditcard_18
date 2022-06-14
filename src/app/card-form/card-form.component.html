@@ -1,6 +1,12 @@
 <form [formGroup]="cardForm" >
+  <!-- name -->
     <input type="text" formControlName="name" placeholder="Name">
-    <ng-container *ngIf="cardForm.controls['name'].errors">
+    <ng-container
+      *ngIf="
+        cardForm.controls['name'].touched &&
+        cardForm.controls['name'].errors &&
+        cardForm.controls['name'].dirty
+      ">
       <small *ngIf="cardForm!.controls!['name']!.errors!['required']">
         Value is required.
       </small>
@@ -9,8 +15,14 @@
       </small>
     </ng-container>
 
+    <!-- surname -->
     <input type="text" formControlName="surname" placeholder="Surname">
-    <ng-container *ngIf="cardForm.controls['surname'].errors">
+    <ng-container
+      *ngIf="
+        cardForm.controls['surname'].touched &&
+        cardForm.controls['surname'].errors &&
+        cardForm.controls['surname'].dirty
+      ">
       <small *ngIf="cardForm!.controls!['surname']!.errors!['required']">
         Value is required.
       </small>
@@ -20,6 +32,9 @@
     </ng-container>
 </form>
 
+
+
+<!--
 <p>Some debugging:</p>
 <div>Form Contents: {{ cardForm.value | json }}</div>
 <div>Form is valid: {{ cardForm.valid }}</div>
@@ -29,3 +44,4 @@
 <p>///the same ways:</p>
 <div>Errors around name: {{ cardForm!.controls!["name"].errors | json }}</div>
 <div>Errors around name: {{ cardForm.get("name")!.errors | json }}</div>
+-->
