@@ -1,0 +1,18 @@
+<input type="text" [formControl]="control" placeholder="Name">
+<ng-container
+  *ngIf="
+    control!.touched &&
+    control!.errors &&
+    control!.dirty
+  ">
+  <small *ngIf="control.errors!['required']">
+    Value is required.
+  </small>
+  <small *ngIf="control.errors!['minlength']">
+    Min length is
+    {{ control.errors!['minlength'].requiredLength }}
+    characters.
+    You entered {{ control.errors!['minlength'].actualLength }}
+    characters.
+  </small>
+</ng-container>
