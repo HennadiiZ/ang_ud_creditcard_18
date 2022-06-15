@@ -40,8 +40,18 @@ export class CardFormComponent implements OnInit {
   }
 
   onSubmit(){
-    console.log("form was submitted")
-    console.log("Card Form controls", this.cardForm.controls)
+    console.log("form was submitted");
+    // console.log("Card Form controls", this.cardForm.controls);
+    this.cardForm.reset();
+  }
+
+  onReset(){
+    // console.log("controls-name", this.cardForm.controls['name'].value);
+    // console.log("controls-cardNumber", this.cardForm.controls['cardNumber'].value);
+    // console.log("controls-expiration", this.cardForm.controls['expiration'].value);
+    // console.log("controls-securityCode", this.cardForm.controls['securityCode'].value);
+
+    this.cardForm.reset();
   }
 
 }

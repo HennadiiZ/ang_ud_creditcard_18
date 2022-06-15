@@ -3,7 +3,8 @@
   <app-input label="Card Number" [control]="cardForm.controls['cardNumber']"></app-input>
   <app-input label="Expiration Date (MM/YY)" [control]="cardForm.controls['expiration']"></app-input>
   <app-input label="Security Code" [control]="cardForm.controls['securityCode']"></app-input>
-  <button [disabled]="cardForm.invalid" class="button">Submit</button>
+  <button [disabled]="cardForm.invalid" class="button is-primary">Submit</button>
+  <button type="button" class="button is-warning" (click)="onReset()">Reset All</button>
 </form>
 
 
