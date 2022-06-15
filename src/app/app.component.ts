@@ -39,6 +39,6 @@ export class AppComponent {
 
   // =========== // Section 19: Simple Data Entry with Template Forms
   // 246. Basic Template Form Setup
-  //
-  
+  // 247. Two Way Binding Syntax
+
 }

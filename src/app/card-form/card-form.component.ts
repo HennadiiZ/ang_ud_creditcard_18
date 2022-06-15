@@ -54,4 +54,7 @@ export class CardFormComponent implements OnInit {
     this.cardForm.reset();
   }
 
+  //=========// Section 19: Simple Data Entry with Template Forms:
+  email!: string;
+
 }
