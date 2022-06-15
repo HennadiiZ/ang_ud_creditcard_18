@@ -40,5 +40,10 @@ export class AppComponent {
   // =========== // Section 19: Simple Data Entry with Template Forms
   // 246. Basic Template Form Setup
   // 247. Two Way Binding Syntax
-
+  // 248. Differences Between Template and Reactive Forms
+  // 249. Validation Around Template Forms
+  // 250. Conditional Validation
+  // 251. Handling Form Submission
+  // 252. Adding Styling and Wrapup
+  
 }

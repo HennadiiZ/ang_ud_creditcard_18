@@ -57,4 +57,8 @@ export class CardFormComponent implements OnInit {
   //=========// Section 19: Simple Data Entry with Template Forms:
   email!: string;
 
+  submit(){
+    console.log(this.email)
+  }
+
 }

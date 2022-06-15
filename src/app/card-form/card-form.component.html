@@ -7,19 +7,41 @@
   <button type="button" class="button is-warning" (click)="onReset()">Reset All</button>
 </form>
 
+<hr>
 <p class="container">
   Section 19: Simple Data Entry with Template Forms:
 </p>
 
 
-<form >
+<form (ngSubmit)="submit()" #emailForm="ngForm">
   <input
     class="input"
+    type="email"
+    pattern=".+@.+\..+"
+    required
     name="email"
     [(ngModel)]="email"
+    #emailControl="ngModel"
   >
-  {{ email }}
+  <!-- <ng-container *ngIf="emailForm!.controls.email.invalid"> -->
+  <ng-container *ngIf="emailControl.invalid && emailControl.touched">
+    <small *ngIf="emailControl.errors.required">
+      Email is required
+    </small>
+    <small *ngIf="emailControl.errors.pattern">
+      This is not an email
+    </small>
+  </ng-container>
+
+  <button
+   class="button is-primary"
+
+  >Submit</button>
 </form>
-
-
+<hr>
+<p>email: {{ email }}</p>
+<p>[object Object]: {{ emailForm }} <!-- [object Object] --></p>
+<p>true: {{ emailForm!.valid }} <!-- true --></p>
+<p>{{ emailForm!.value | json }} <!-- {} --></p>
+<p>Email validations errors: {{ emailForm!.controls.email.errors | json }}</p>
 
